@@ -1,6 +1,6 @@
 # random CLI
 
-*NodeJS Command Line Interface to select randomly from given list or range*
+*node.js Command Line Interface to select randomly from given list or range*
 
 [![npm version](https://badge.fury.io/js/%40juanbrujo%2Frandom-cli.svg)](https://badge.fury.io/js/%40juanbrujo%2Frandom-cli)
 

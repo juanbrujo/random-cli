@@ -1,13 +1,12 @@
 #!/usr/bin/env node
 
 /*!
-
-*/
-
-// var argv  = require('yargs')
-//   .option('layer', { alias: 'l', type: 'boolean' })
-//   .option('text', { alias: 't', type: 'boolean' })
-//   .argv,
+ * random-cli
+ * node.js Command Line Interface to select randomly from given list or range
+ * https://github.com/juanbrujo/random-cli
+ * 2015 Jorge Epuñan | @csslab
+ * License: MIT
+ */
 
 var program = require('commander');
 var crypto 	= require("crypto");
