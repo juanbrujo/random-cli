@@ -9,7 +9,6 @@
 */
 
 var program = require('commander');
-var crypto  = require("crypto");
 var path    = require('path');
 var pkg     = require(path.join(__dirname, '../package.json'));
 var howMany = 1;
@@ -26,7 +25,7 @@ function list(val) {
   var newList = [];
   var values = val.split(',');
 
-  values.forEach(function(l){
+  values.forEach(function(l) {
     newList.push(l);
   });
 
