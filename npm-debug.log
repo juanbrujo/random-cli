@@ -1,0 +1,101 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@3.5.0
+3 info using node@v0.10.33
+4 verbose node symlink /usr/local/bin/node
+5 verbose publish [ '.' ]
+6 silly cache add args [ '.', null ]
+7 verbose cache add spec .
+8 silly cache add parsed spec { raw: '.',
+8 silly cache add   scope: null,
+8 silly cache add   name: null,
+8 silly cache add   rawSpec: '.',
+8 silly cache add   spec: '/Library/WebServer/Documents/random-cli',
+8 silly cache add   type: 'directory' }
+9 verbose addLocalDirectory /Users/jepunan/.npm/@juanbrujo/random-cli/0.0.1/package.tgz not in flight; packing
+10 info lifecycle @juanbrujo/random-cli@0.0.1~prepublish: @juanbrujo/random-cli@0.0.1
+11 silly lifecycle @juanbrujo/random-cli@0.0.1~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ '/Users/jepunan/.npm/@juanbrujo/random-cli/0.0.1/package.tgz',
+12 verbose tar pack   '/Library/WebServer/Documents/random-cli' ]
+13 verbose tarball /Users/jepunan/.npm/@juanbrujo/random-cli/0.0.1/package.tgz
+14 verbose folder /Library/WebServer/Documents/random-cli
+15 verbose addLocalTarball adding from inside cache /Users/jepunan/.npm/@juanbrujo/random-cli/0.0.1/package.tgz
+16 silly cache afterAdd @juanbrujo/random-cli@0.0.1
+17 verbose afterAdd /Users/jepunan/.npm/@juanbrujo/random-cli/0.0.1/package/package.json not in flight; writing
+18 verbose afterAdd /Users/jepunan/.npm/@juanbrujo/random-cli/0.0.1/package/package.json written
+19 silly publish { name: '@juanbrujo/random-cli',
+19 silly publish   version: '0.0.1',
+19 silly publish   description: 'select randomly from given list',
+19 silly publish   author: { name: 'Jorge Epuñan | @csslab' },
+19 silly publish   license: 'MIT',
+19 silly publish   main: 'bin/random-cli.js',
+19 silly publish   bin: { random: 'bin/random-cli.js' },
+19 silly publish   repository:
+19 silly publish    { type: 'git',
+19 silly publish      url: 'git+https://github.com/juanbrujo/random-cli.git' },
+19 silly publish   keywords: [ 'cli', 'node', 'random' ],
+19 silly publish   dependencies: { commander: '^2.9.0', yargs: '^3.30.0' },
+19 silly publish   devDependencies: {},
+19 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+19 silly publish   readme: '# random CLI\n\n*NodeJS CLI to select randomly from given list or range*\n\n## Commands:\n\n```\n-r, --range <int>..<int>            // outputs random integer between 2 integers\n-l, --list <elem1>,<elem>,<elemN>   // outputs random from list of elements\n-p, --password <length (int)>       // outputs a random string from a map of characters\n```\n\n## Use:\n\n```\n$ node bin/random-cli.js -r 12..20          // ✔ Random from range: 15\n$ node bin/random-cli.js -l uno,dos,tres    // ✔ Random from list: "tres"\n$ node bin/random-cli.js -p 8               // ✔ Random password: "bM8bkJjk"\n```\n\n## Installation:\n\nClone this repo and use it locally:\n\n```\n$ git clone https://github.com/juanbrujo/random-cli\n$ cd random-cli\n$ node bin/random-cli.js <option>\n```\n\n### TO-DO:\n- global npm installation\n- multiple results (more than one)\n\n',
+19 silly publish   readmeFilename: 'README.md',
+19 silly publish   gitHead: 'd5a351354c08129b2211ff8c1356dc0d2b03514b',
+19 silly publish   bugs: { url: 'https://github.com/juanbrujo/random-cli/issues' },
+19 silly publish   homepage: 'https://github.com/juanbrujo/random-cli#readme',
+19 silly publish   _id: '@juanbrujo/random-cli@0.0.1',
+19 silly publish   _shasum: 'f0b2ee5777f7744afe65268544e52c2d7f40ea03',
+19 silly publish   _from: '.' }
+20 verbose getPublishConfig undefined
+21 silly mapToRegistry name @juanbrujo/random-cli
+22 silly mapToRegistry scope (from package name) @juanbrujo
+23 verbose mapToRegistry no registry URL found in name for scope @juanbrujo
+24 silly mapToRegistry scope (from config) @juanbrujo
+25 verbose mapToRegistry no registry URL found in config for scope @juanbrujo
+26 silly mapToRegistry using default registry
+27 silly mapToRegistry registry https://registry.npmjs.org/
+28 silly mapToRegistry uri https://registry.npmjs.org/@juanbrujo%2frandom-cli
+29 verbose publish registryBase https://registry.npmjs.org/
+30 silly publish uploading /Users/jepunan/.npm/@juanbrujo/random-cli/0.0.1/package.tgz
+31 verbose request uri https://registry.npmjs.org/@juanbrujo%2frandom-cli
+32 verbose request sending authorization for write operation
+33 info attempt registry request try #1 at 13:19:45
+34 verbose request using bearer token for auth
+35 verbose request id 312de90b0414461c
+36 http request PUT https://registry.npmjs.org/@juanbrujo%2frandom-cli
+37 http 403 https://registry.npmjs.org/@juanbrujo%2frandom-cli
+38 verbose headers { 'content-type': 'application/json',
+38 verbose headers   'cache-control': 'max-age=0',
+38 verbose headers   'content-length': '95',
+38 verbose headers   'accept-ranges': 'bytes',
+38 verbose headers   date: 'Tue, 01 Dec 2015 16:19:31 GMT',
+38 verbose headers   via: '1.1 varnish',
+38 verbose headers   connection: 'keep-alive',
+38 verbose headers   'x-served-by': 'cache-sjc3122-SJC',
+38 verbose headers   'x-cache': 'MISS',
+38 verbose headers   'x-cache-hits': '0',
+38 verbose headers   'x-timer': 'S1448986771.128510,VS0,VE203' }
+39 verbose request invalidating /Users/jepunan/.npm/registry.npmjs.org/_40juanbrujo_252frandom-cli on PUT
+40 error publish Failed PUT 403
+41 verbose stack Error: "You cannot publish over the previously published version 0.0.1." : @juanbrujo/random-cli
+41 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+41 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+41 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+41 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:198:22)
+41 verbose stack     at Request.emit (events.js:98:17)
+41 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1082:10)
+41 verbose stack     at Request.emit (events.js:117:20)
+41 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1009:12)
+41 verbose stack     at IncomingMessage.emit (events.js:117:20)
+41 verbose stack     at _stream_readable.js:943:16
+42 verbose statusCode 403
+43 verbose pkgid @juanbrujo/random-cli
+44 verbose cwd /Library/WebServer/Documents/random-cli
+45 error Darwin 13.4.0
+46 error argv "node" "/usr/local/bin/npm" "publish"
+47 error node v0.10.33
+48 error npm  v3.5.0
+49 error code E403
+50 error "You cannot publish over the previously published version 0.0.1." : @juanbrujo/random-cli
+51 error If you need help, you may report this error at:
+51 error     <https://github.com/npm/npm/issues>
+52 verbose exit [ 1, true ]

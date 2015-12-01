@@ -2,6 +2,8 @@
 
 *NodeJS CLI to select randomly from given list or range*
 
+[![npm version](https://badge.fury.io/js/%40juanbrujo%2Frandom-cli.svg)](https://badge.fury.io/js/%40juanbrujo%2Frandom-cli)
+
 ## Commands:
 
 ```
