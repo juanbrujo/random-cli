@@ -1,0 +1,25 @@
+{
+  "name": "random-cli",
+  "version": "0.0.1",
+  "description": "select randomly from given list",
+  "main": "bin/random-cli.js",
+  "bin": {
+    "random": "bin/random-cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "?"
+  },
+  "keywords": [
+    "cli",
+    "node",
+    "random"
+  ],
+  "author": "Jorge Epuñan | @csslab",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.9.0",
+    "crypto": "0.0.3",
+    "yargs": "^3.30.0"
+  }
+}
