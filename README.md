@@ -8,14 +8,15 @@
 
 ```
 -r, --range <int>..<int>            // outputs random integer between 2 integers
--l, --list <elem1>,<elem2>,<elemN>   // outputs random from list of elements
+-l, --list <elem1>,<elem2>,<elemN>	// outputs random from list of elements
 -p, --password <length (int)>       // outputs a random string from a map of characters
+-q, --quantity <quantity (int)>		// [option] number random items to output
 ```
 
 ## Use:
 
 ```
-$ node bin/random-cli.js -r 12..20          // ✔ Random from range: 15
+$ node bin/random-cli.js -r 12..20 -q 3     // ✔ Random from range: 15,17,20
 $ node bin/random-cli.js -l uno,dos,tres    // ✔ Random from list: "tres"
 $ node bin/random-cli.js -p 8               // ✔ Random password: "bM8bkJjk"
 ```
@@ -41,5 +42,5 @@ $ random <option>
 
 ### TO-DO:
 - <s>global npm installation</s>
-- multiple results (more than one)
+- <s>multiple results (more than one)</s>
 
