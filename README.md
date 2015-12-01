@@ -30,6 +30,7 @@ Clone this repo and use it through node:
 ```
 $ git clone https://github.com/juanbrujo/random-cli
 $ cd random-cli
+$ npm install
 $ node bin/random-cli.js <option>
 ```
 

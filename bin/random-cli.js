@@ -16,8 +16,8 @@ var howMany = 1;
 var values  = { range: [], list: [], password: [] };
 
 function range(val) {
-  var firstNum = parseInt(val.split('..')[0]);
-  var lastNum = parseInt(val.split('..')[1]);
+  var firstNum  = parseInt( val.split('..')[0] );
+  var lastNum   = parseInt( val.split('..')[1] );
 
   return Math.floor( Math.random() * ( lastNum - firstNum + 1 ) + firstNum );
 }
@@ -30,7 +30,7 @@ function list(val) {
     newList.push(l);
   });
 
-  return newList[Math.floor(Math.random() * newList.length)];
+  return newList[ Math.floor( Math.random() * newList.length ) ];
 }
 
 function quantity(val) {
@@ -40,8 +40,9 @@ function quantity(val) {
 function password(val) {
   var chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOP1234567890';
   var result = '';
+
   for (var x = 0; x < val; x++) {
-    var i = Math.floor(Math.random() * chars.length);
+    var i = Math.floor( Math.random() * chars.length );
     result += chars.charAt(i);
   }
 
