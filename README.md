@@ -45,6 +45,6 @@ $ node bin/random-cli.js <option>
 
 ### TO-DO:
 - <s>global npm installation</s>
-- <s>multiple results (more than one)</s> (thanks @rotvulpix)
-- <s>check for different results for more than 1 output</s> (thanks @lgaticaq)
+- <s>multiple results (more than one)</s> (thanks [@rotvulpix](https://github.com/rotvulpix) ⭐️)
+- <s>check for different results for more than 1 output</s> (thanks [@lgaticaq](https://github.com/lgaticaq) 🍺)
 

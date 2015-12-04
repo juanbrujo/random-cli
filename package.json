@@ -1,7 +1,7 @@
 {
   "name": "@juanbrujo/random-cli",
-  "version": "0.0.4",
-  "description": "select randomly from given list",
+  "version": "0.0.5",
+  "description": "node.js Command Line Interface to select randomly from given list, range or character map",
   "author": "Jorge Epuñan | @csslab",
   "license": "MIT",
   "main": "bin/random-cli.js",
@@ -15,7 +15,10 @@
   "keywords": [
     "cli",
     "node",
-    "random"
+    "random",
+    "list",
+    "range",
+    "password"
   ],
   "dependencies": {
     "commander": "^2.9.0",
