@@ -12,24 +12,45 @@ var program = require('commander');
 var path    = require('path');
 var pkg     = require(path.join(__dirname, '../package.json'));
 var howMany = 1;
-var values  = { range: [], list: [], password: [] };
+var values  = { range: null, list: null, password: null };
 
 function range(val) {
   var firstNum  = parseInt( val.split('..')[0] );
   var lastNum   = parseInt( val.split('..')[1] );
+  var numbers   = [];
+  var results   = [];
 
-  return Math.floor( Math.random() * ( lastNum - firstNum + 1 ) + firstNum );
+  for (var i = firstNum; i <= lastNum; i++) {
+    numbers.push(i);
+  }
+
+  if (howMany > numbers.length) howMany = numbers.length;
+
+  for (var i = 0; i < howMany; i++) {
+    var index = Math.floor(Math.random() * numbers.length);
+    results.push(numbers.splice(index, 1)[0]);
+  }
+
+  return results.join(',');
 }
 
 function list(val) {
   var newList = [];
   var values = val.split(',');
+  var results = [];
 
   values.forEach(function(l) {
     newList.push(l);
   });
 
-  return newList[ Math.floor( Math.random() * newList.length ) ];
+  if (howMany > newList.length) howMany = newList.length;
+
+  for (var i = 0; i < howMany; i++) {
+    var index = Math.floor(Math.random() * newList.length);
+    results.push(newList.splice(index, 1)[0]);
+  }
+
+  return results.join(',');
 }
 
 function quantity(val) {
@@ -39,39 +60,41 @@ function quantity(val) {
 function password(val) {
   var chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOP1234567890';
   var result = '';
+  var results = [];
 
-  for (var x = 0; x < val; x++) {
-    var i = Math.floor( Math.random() * chars.length );
-    result += chars.charAt(i);
+  for (var i = 0; i < howMany; i++) {
+    for (var x = 0; x < val; x++) {
+      var i = Math.floor( Math.random() * chars.length );
+      result += chars.charAt(i);
+    }
+    results.push(result);
   }
 
-  return result;
+  return results.join(',');
 }
 
 program
   .version( pkg.version )
   .usage( '[options] <file ...>' )
-  .option( '-r, --range <from>..<to>', 'A range', range )
-  .option( '-l, --list <item1>,<item2>,<itemN>', 'A list comma separated', list )
-  .option( '-p, --password <length>', 'Length', password )
-  .option( '-q, --quantity <quantity>', 'Number items to output', quantity );
+  .option( '-r, --range <from>..<to>', 'A range')
+  .option( '-l, --list <item1>,<item2>,<itemN>', 'A list comma separated')
+  .option( '-p, --password <length>', 'Length')
+  .option( '-q, --quantity <quantity>', 'Number items to output', quantity);
 
-for( var i = 1; i <= howMany; i++ ) {
-  program.parse( process.argv );
+program.parse( process.argv );
 
-  if( program.range ) values.range.push( program.range );
-  if( program.list ) values.list.push( program.list );
-  if( program.password ) values.password.push( program.password );
-}
+if( program.range ) values.range = range(program.range);
+if( program.list ) values.list = list(program.list);
+if( program.password ) values.password = password(program.password);
 
-if( Boolean(values.range.length) ) {
+if( Boolean(values.range) ) {
   console.log(' ✔  Random from range: %j', values.range);
 }
 
-if( Boolean(values.list.length) ) {
+if( Boolean(values.list) ) {
   console.log(' ✔  Random from list: %j', values.list);
 }
 
-if( Boolean(values.password.length) ) {
+if( Boolean(values.password) ) {
   console.log(' ✔  Random passwords: %j', values.password);
 }
