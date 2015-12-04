@@ -10,7 +10,7 @@
 -r, --range <int>..<int>            // outputs random integer between 2 integers
 -l, --list <elem1>,<elem2>,<elemN>	// outputs random from list of elements
 -p, --password <length (int)>       // outputs a random string from a map of characters
--q, --quantity <quantity (int)>		// [option] number random items to output
+-q, --quantity <quantity (int)>		// [option] items to output
 ```
 
 ## Use:
@@ -23,6 +23,14 @@ $ node bin/random-cli.js -p 8               // ✔ Random password: "bM8bkJjk"
 
 ## Installation:
 
+### Globally 👍 (recommended)
+
+```
+$ sudo npm install @juanbrujo/random-cli -g
+$ random <option>
+```
+
+
 ### Locally: 
 
 Clone this repo and use it through node:
@@ -34,14 +42,9 @@ $ npm install
 $ node bin/random-cli.js <option>
 ```
 
-### Globally 👍 (recommended)
-
-```
-$ sudo npm install @juanbrujo/random-cli -g
-$ random <option>
-```
 
 ### TO-DO:
 - <s>global npm installation</s>
-- <s>multiple results (more than one)</s>
+- <s>multiple results (more than one)</s> (thanks @rotvulpix)
+- <s>check for different results for more than 1 output</s> (thanks @lgaticaq)
 
