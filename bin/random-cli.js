@@ -36,7 +36,7 @@ function range(val) {
 
 function list(val) {
   var newList = [];
-  var values = val.split(',');
+  var values  = val.split(',');
   var results = [];
 
   values.forEach(function(l) {
@@ -58,8 +58,8 @@ function quantity(val) {
 }
 
 function password(val) {
-  var chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOP1234567890';
-  var result = '';
+  var chars   = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOP1234567890';
+  var result  = '';
   var results = [];
 
   for (var i = 0; i < howMany; i++) {
