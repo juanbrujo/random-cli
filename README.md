@@ -16,17 +16,18 @@
 ## Use:
 
 ```
-$ node bin/random-cli.js -r 12..20 -q 3     // ✔ Random from range: 15,17,20
-$ node bin/random-cli.js -l uno,dos,tres    // ✔ Random from list: "tres"
-$ node bin/random-cli.js -p 8               // ✔ Random password: "bM8bkJjk"
+$ random -r 12..20 -q 3     // ✔ Random from range: 15,17,20
+$ random -l uno,dos,tres    // ✔ Random from list: "tres"
+$ random -p 8               // ✔ Random password: "bM8bkJjk"
 ```
 
 ## Installation:
 
-### Globally 👍 (recommended)
+### Globally (recommended 👍)
 
 ```
 $ sudo npm install @juanbrujo/random-cli -g
+// use
 $ random <option>
 ```
 
@@ -39,6 +40,7 @@ Clone this repo and use it through node:
 $ git clone https://github.com/juanbrujo/random-cli
 $ cd random-cli
 $ npm install
+// use
 $ node bin/random-cli.js <option>
 ```
 
