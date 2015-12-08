@@ -11,6 +11,9 @@
 -l, --list <elem1>,<elem2>,<elemN>	// outputs random from list of elements
 -p, --password <length (int)>       // outputs a random string from a map of characters
 -q, --quantity <quantity (int)>		// [option] items to output
+
+-V, --version						// output the version number
+-h, --help							// output usage information
 ```
 
 ## Use:

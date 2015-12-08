@@ -75,7 +75,7 @@ function password(val) {
 
 program
   .version( pkg.version )
-  .usage( '[options] <file ...>' )
+  .usage( '[option]' )
   .option( '-r, --range <from>..<to>', 'A range')
   .option( '-l, --list <item1>,<item2>,<itemN>', 'A list comma separated')
   .option( '-p, --password <length>', 'Length')
